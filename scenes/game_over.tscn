@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpshtmfjknu5a"]
+
+[ext_resource type="Script" uid="uid://bicp71a0ve58l" path="res://scenes/game_over.gd" id="1_xeevv"]
+[ext_resource type="FontFile" uid="uid://il5j58i47wl6" path="res://assets/font/VeniteAdoremusStraight-Yzo6v.ttf" id="2_wqhvx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqhvx"]
+bg_color = Color(0.473065, 0, 0.198703, 1)
+draw_center = false
+
+[node name="Game-Over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xeevv")
+
+[node name="CapturedImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver_Text" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -369.0
+offset_top = -127.0
+offset_right = 369.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.63413, 0.268756, 1, 1)
+theme_override_fonts/font = ExtResource("2_wqhvx")
+theme_override_font_sizes/font_size = 111
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -368.0
+offset_top = 6.0
+offset_right = 370.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1.15514e-06, 0.751535, 0.915436, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.498105, 0.569133, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("2_wqhvx")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_wqhvx")
+text = "final score : 200"
+horizontal_alignment = 1
