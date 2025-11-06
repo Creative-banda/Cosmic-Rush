@@ -17,6 +17,8 @@ var json_path = "user://highscores.json"
 
 func _ready() -> void:
 	UI.disable_ui()
+	Globals.health = 100
+	Globals.score = 0
 	# Get screen dimensions
 	var viewport_rect = get_viewport_rect()
 	screen_width = viewport_rect.size.x

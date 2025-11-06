@@ -26,8 +26,6 @@ func game_over() -> void:
 	bullet_count = 50
 	print("Game Over! Final Score: %d" % score)
 	save_highscore(player_name, score)
-	health = 100
-	score = 0
 	# wait a moment before changing scene
 	await get_tree().create_timer(1.0).timeout
 	
