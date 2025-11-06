@@ -48,4 +48,5 @@ func take_damage() -> void:
 func _on_area_2d_body_entered(body:Node2D) -> void:
 	if body.name == "player":
 		body.take_damage(50)
+		AudioManager.play_sound("rock_smash")
 		queue_free()  # Remove obstacle on collision

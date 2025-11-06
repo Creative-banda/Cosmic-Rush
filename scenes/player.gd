@@ -6,7 +6,7 @@ const LERP_SPEED = 10.0  # How smoothly the player moves to target position
 
 var udp := PacketPeerUDP.new()
 var target_position_percent := 50.0  # Default to middle of screen (vertical)
-var target_horizontal_percent := 10.0  # Default to middle of screen (horizontal)
+var target_horizontal_percent := 10.0  # Default to starting of screen (horizontal)
 var screen_height := 0.0
 var screen_width := 0.0
 
@@ -100,6 +100,7 @@ func take_damage(amount: int) -> void:
 	if Globals.health <= 0:
 		return  # Already dead
 	Globals.update_health(-amount)
+	$AnimationPlayer.play("hit_blink")
 	if Globals.health <= 0:
 		# Send CAPTURE message via UDP when player dies
 		send_udp_message("CAPTURE")
